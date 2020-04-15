@@ -9,4 +9,4 @@ Encuentra todos los archivos de 3D y software que contribuimos de la comunidad q
 <li>splitters</li>
 
 ## ventiladores
-<li>ventocre.health</li>
+<li>ventcore.health</li>
