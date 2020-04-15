@@ -5,10 +5,10 @@
 Encuentra todos los archivos de 3D y software que contribuimos de la comunidad que encuentras en makersmexico.org.
 
 ## Instalación:
-'''bash
+```bash
 git clone https://github.com/mexmarv/TOMGlobal.git
 cd TOMGLobal
-
+```
 ## stl
 <li>mascaras</li>
 <li>splitters</li>
