@@ -7,7 +7,8 @@ Encuentra todos los archivos de 3D y software que contribuimos de la comunidad q
 ## Instalación:
 ```bash
 git clone https://github.com/mexmarv/TOMGlobal.git
-cd TOMGLobal
+cd TOMGlobal
+cd .. (stl | ventiladores)
 ```
 ## stl
 <li>mascaras</li>
