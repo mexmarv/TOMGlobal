@@ -1,3 +1,0 @@
-(3/23/2020 4:00PM) R2 Release: Updated Shield Drawing
-
-(3/26/2020 4:00PM) R3 Release: Created "Shield Materials.txt", created "Changelog.txt" and added the Material Matrix image.
