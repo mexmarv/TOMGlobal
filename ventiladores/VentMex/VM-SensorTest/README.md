@@ -8,20 +8,20 @@ Puedes ver el sitio del proyecto directamente para explicación de todo el proye
 ```bash
 git clone https://github.com/mexmarv/TOMGlobal.git
 cd TOMGlobal/ventiladores/VentMex
-cd .. ( VM2.0 | STL | otros )
+cd .. ( VM2.1 | VM-SensorTest | VM-MotorTest | STL | otros )
 ```
-## VM2.0
+## VM2.1
 <ul>
 <li>Software y Libs de Arduino para VentMex
 <ul>
-<li> Se incluye Librería de encoder del AMS-AS5048B 
+<li> Se incluye Librería de encoder del AMS-AS5048B, Nuestras Librerías: VMPresion.h, VMFlujo.h, VMConstantes.h 
 </li>
 </ul>
 </li>
 <li>Librerías necesarias que se deben de instalar son:
 <ul>
 <li>
- BasicStepperMotor V 1.1.3
+ AccelStepper (Última Version)
 </li>
 <li>
  U8g2 (Última Versión)
@@ -33,7 +33,7 @@ SparkFun MAX30101x  (Última Versión)
 </ul>
 
 ## STL
-<li>Archvos Imprimibles de VentMex 2.0 formato .STL</li>
+<li>Archvos Imprimibles de VentMex 2.1 formato .STL</li>
 <li>Recomendamos impresión con 80% infill y soportes donde sea necsario</li>
 
 ## otros
