@@ -10,7 +10,7 @@ git clone https://github.com/mexmarv/TOMGlobal.git
 cd TOMGlobal/ventiladores/VentMex
 cd .. ( VM2.1 | VM-SensorTest | VM-MotorTest | STL | otros )
 ```
-## VM2.0
+## VM2.1
 <ul>
 <li>Software y Libs de Arduino para VentMex
 <ul>
