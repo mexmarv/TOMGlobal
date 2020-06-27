@@ -1,46 +1,43 @@
+/*
+   Demo for VentMex Motor Control and Calibration, using AccelStepper with NEMA-23, Sensors Pressure
+   200 Steps, 32 Microsteps
+*/
 
-#include "VMPresiones.h"
+#include "VMPresion.h"
+#include "VMFlujo.h"
 #include <Streaming.h>
 
-VMPresiones presion(A0); // Objeto de Presion que calcula flujo
-
+VMPresion presion(A0);  // Presion
+VMFlujo flujo(A1);    // Flujo (presion diferencial)
 long now;
-int x;
+
 void setup()
 {
+  
+  Serial.begin(115200);
+  
+  Serial << "TOM - VentMex comenzando la calibracion ...\n";
 
-  Serial.begin(2000000);
-  Serial << "\n\n\n\n\n\n\n\nTOM - VentMex comenzando la calibracion ...\n";
   now = millis();
+  flujo.calibrar();
   presion.calibrar();
-  Serial << "Calibramos el CERO en " << presion.calibrado() << " digital | " << presion.calibradop() << " cmH20 en " << (millis() - now) << " ms. \n";
-  //presion.borra_pico();
-  delay(1000);
-  x = 0;
+  Serial << "Calibramos el CERO en " << _FLOAT(flujo.calibrado(),3) << " DAC | " << _FLOAT(flujo.calibradop(),3) << " cmH20\n";
+  Serial << "Calibramos el CERO en " << _FLOAT(presion.calibrado(),3) << " DAC | " << _FLOAT(presion.calibradop(),3) << " cmH20\n...ambos calibrados en " << (millis() - now) << " ms. \n";
+
 }
 
 void loop()
 {
 
+  // Ahora probando Flujo nada mas
   now = millis();
-  presion.lee(); // Leer para cada ciclo y se ajustan las presiones (PeeP, Plateau y PIp)
-  Serial << "Lectura Actual (cmH20): " << presion.get()
-         << " Flujo: " << _FLOAT(presion.flujo(),2) << " l/m" 
-         << " | Pico: " << presion.pico()
-         << " | Peep: " << presion.peep()
-         << " | Plateau: " << presion.plateau()
-         << " en " << (millis() - now) << "ms. \n";
-  x++;
-  if (x == 5) presion.pon_plateau(); // Pon Plateau demo
-  if (x == 10) presion.pon_peep(); // Pon Peep demo
-  if (x > 20) // Borra Pico Presion cada 5 lecturas
-  {
-    x = 0;
-    presion.borra_pico();
-    Serial << "...Pico RESET...\n"; 
-  } 
-  float tdSteps = presion.volumenApasos(850);
-  Serial << "Prueba solo el calculo AMBU: 850ml = " <<  tdSteps << " volume2steps " << round(tdSteps * 64) << "\n";
- 
+  flujo.flujo(0.21); //Pones el valor de FiO2
+  //flujo.leeRaw();
+  Serial << "FLUJO: Lectura Actual en: " << (millis() - now) << "ms. \n";
+  now = millis();
+  presion.lee(); 
+  //Serial1 << "E" << _FLOAT(flujo.flujo(0.21),2) << "," << _FLOAT(presion.get(),2)<<"\n";
+  //presion.leeRaw();
+  Serial << "PRESION: Lectura Actual en: " << (millis() - now) << "ms. \n";
   delay(500);
 }
