@@ -8,7 +8,7 @@ Puedes ver el sitio del proyecto directamente para explicación de todo el proye
 ```bash
 git clone https://github.com/mexmarv/TOMGlobal.git
 cd TOMGlobal/ventiladores/VentMex
-cd .. ( VM2.1 | VM-SensorTest | VM-MotorTest | STL | otros )
+cd .. ( VM2.1 | VM-SensorTest | VM-MotorTest | STL | gerber | otros )
 ```
 ## VM2.1
 <ul>
