@@ -19,4 +19,4 @@ cd .. (UNO | mascaras | splitters | ventiladores)
 <li>Stratasys-Letter</li>
 
 ## ventiladores
-<li>ventcore.health - mod México</li>
+<li>VentMex</li>
