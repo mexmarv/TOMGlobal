@@ -32,9 +32,13 @@ SparkFun MAX30101x  (Última Versión)
 </ul>
 </ul>
 
-## STL
+## stl
 <li>Archvos Imprimibles de VentMex 2.1 formato .STL</li>
 <li>Recomendamos impresión con 80% infill y soportes donde sea necsario</li>
 
+## gerber
+<li>Archvos para hacer tu propio VentMex 2.0 Shield para Arduino Mega.</li>
+
 ## otros
 <li>BOM (Bill of Materials - Lista de Materiales), Cálculo de Volúmen Comandado a pasos, y otros.</li>
+<li>Varios</li>
